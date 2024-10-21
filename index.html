@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Online Budgeter</h1>
+
+    <h2>Pay</h2>
+    <table id="payTable">
+        <tr>
+            <th>Date</th>
+            <th>Amount</th>
+        </tr>
+    </table>
+    <button class="add-row-btn" onclick="addRowPay()">Add Row</button>
+    <button class="del-row-btn" onclick="delRowPay()">Delete Row</button>
+
+    <h2>Expenses</h2>
+    <table id="budgetTable">
+        <tr>
+            <th>Category</th>
+            <th>Budgeted Amount</th>
+            <th>Spent</th>
+            <th>Remaining</th>
+        </tr>
+    </table>
+    <button class="add-row-btn" onclick="addRowBudget()">Add Row</button>
+    <button class="del-row-btn" onclick="delRowBudget()">Delete Row</button>
+    <div id="chartsContainer"></div>
+
+    <h2>Purchases</h2>
+    <table id="Purchases">
+        <tr>
+            <th>Item</th>
+            <th>Amount</th>
+        </tr>
+    </table>
+    <button class="add-row-btn" onclick="addRowPurchase()">Add Row</button>
+    <button class="del-row-btn" onclick="delRowPurchase()">Delete Row</button>
+    <h4>Total: $<span id="totalAmountDisplay">0.00</span></h4>
+
+    <h2>Total Spending</h2>
+    <canvas id="comparisonBarChart" width="400" height="200"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="index.js"></script>
+</html>
